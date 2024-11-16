@@ -13,7 +13,7 @@ const AboutUs = () => {
             height={604}
             />
         </div>
-        <div className='w-full md:w-1/2 mt-10'>
+        <div className='w-full lg:w-1/2 mt-10'>
             <h1 className='text-3xl font-semibold font-serif'>Why Choose us?</h1>
             <hr  className='w-32 mt-2 mb-5'/>
             <p className='text-[14px] text-gray-600'>Lorem ipsum dolor sit amet consectetur, adipisicing elit.Porro voluptatibus quo iste nihil impedit, ipsa nostrum, reprehenderit magnam sint dolore vero facilis aut aliquam quidem neque aliquid eos soluta quae... <Link href={'/'}> <span className='text-primary'>Learn more</span> </Link> </p>

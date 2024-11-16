@@ -36,7 +36,8 @@ const HomePage = async () => {
         </div>
         <Suspense fallback={"loading"}>
         <ProductList categoryId={process.env.FEATURED_PRODUCTS_CATEGORY_ID!}
-        limit={4}/>
+        limit={4}
+        showPagination={false}/>
         </Suspense>
       </div>
       <div className="mt-24">

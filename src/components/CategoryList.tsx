@@ -9,7 +9,7 @@ const CategoryList = async () => {
    const myWixClient = await wixClientServer()
    const cats = await myWixClient.collections.queryCollections().find()
   return (
-    <div className='px-4 md:px-52 overflow-x-scroll scrollbar-hide'>
+    <div className='px-4  lg:px-52 overflow-x-scroll scrollbar-hide'>
         <div className='flex gap-4 md:gap-8'>
             {/* link */}
             {cats.items.map((item)=> (
