@@ -11,7 +11,7 @@ const Discover = () => {
                 <h2 className='font-serif text-5xl'>Indoor Plants</h2>
                 <p className='text-[15px] font-light font-sans my-5 text-meow'>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium...</p>
                 <div className='my-10'>
-                <button>View Now</button>
+                <button className='ring-1 ring-primary py-2 px-3 text-primary rounded-md hover:bg-primary hover:text-white'>View Now</button>
                 </div>
             </div>
             <div className="relative cursor-pointer">
@@ -42,7 +42,7 @@ const Discover = () => {
                 <h2 className='font-serif text-5xl'>Outdoor Plants</h2>
                 <p className='text-[15px] font-light font-sans my-5 text-meow'>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium...</p>
                 <div className='my-10'>
-                <button>View Now</button>
+                <button className='ring-1 ring-primary py-2 px-3 text-primary rounded-md hover:bg-primary hover:text-white'>View Now</button>
                 </div>
             </div>
             <div className="relative cursor-pointer">
