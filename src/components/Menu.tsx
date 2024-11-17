@@ -19,7 +19,7 @@ const Menu = () => {
                 <Link href={'/list'} onClick={handleClose}>Shop</Link>
                 <Link href={'/'} onClick={handleClose}>Deals</Link>
                 <Link href={'/'} onClick={handleClose}>About</Link>
-                <Link href={'/'} onClick={handleClose}>Logout</Link>
+                <Link href={'/login'} onClick={handleClose}>Login</Link>
                 <Link href={'/'} onClick={handleClose}>Cart</Link>
                 <Image src={'/hero3.png'} alt='image' width={250} height={250} className='absolute -bottom-12 -left-40'/>
 

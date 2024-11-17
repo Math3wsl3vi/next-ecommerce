@@ -79,8 +79,8 @@ const ProductList = async ({
                 (section: any)=>section.title === "shortDesc")?.description || ""
         ),
         }}></div>)}
-        <button className='rounded-md ring-1 ring-gray-300 w-max text-primary py-2 px-3 hover:bg-primary hover:text-white'
-        >Add To Cart</button>
+        {showPagination && <button className='rounded-md ring-1 ring-gray-300 w-max text-primary py-2 px-3 hover:bg-primary hover:text-white'
+        >Add To Cart</button>}
         </div>
         </Link>
         ))}
