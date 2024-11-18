@@ -3,15 +3,14 @@ import { getFirestore } from "firebase/firestore";
 import { getStorage } from "@firebase/storage";
 import { getAuth, setPersistence, browserLocalPersistence, browserSessionPersistence } from 'firebase/auth';
 
-// Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyBhFKwxf4zyLUCONfmadGGE9WOMMu0idZY",
-  authDomain: "testauth-e55b7.firebaseapp.com",
-  projectId: "testauth-e55b7",
-  storageBucket: "testauth-e55b7.firebasestorage.app",
-  messagingSenderId: "258851219168",
-  appId: "1:258851219168:web:d528971e375ce87cd79285"
-};
+apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
+authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
+projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
+storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
+messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
+appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
+}
 
 
 // Initialize Firebase
