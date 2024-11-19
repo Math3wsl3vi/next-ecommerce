@@ -7,7 +7,9 @@ import CartModal from './CartModal';
 import { useWixContext } from '@/hooks/useWixClient';
 import { useCartStore } from '@/hooks/useCartStore';
 import { getAuth, onAuthStateChanged, signOut } from 'firebase/auth';
-// import { auth } from '../../FirebaseConfig';
+import { auth } from '../../FirebaseConfig';
+
+
 
 const NavabarIcons = () => {
     const [isProfileOpen, setIsProfileOpen] = useState(false);
@@ -17,7 +19,7 @@ const NavabarIcons = () => {
 
     const pathName = usePathname()
 
-    const auth = getAuth();
+    // const auth = getAuth();
     const router = useRouter();
     const myWixClient = useWixContext();
 

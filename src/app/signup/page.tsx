@@ -6,6 +6,7 @@ import Link from 'next/link'
 import { createUserWithEmailAndPassword, updateProfile } from 'firebase/auth'
 import { auth } from './../../../FirebaseConfig.js'
 import { useRouter } from 'next/navigation'
+import Spinner from '@/components/Spinner'
 
 
 
@@ -13,6 +14,8 @@ const SignUp = () => {
   const [email, setEmail ] = useState('');
   const [password, setPassword ] = useState('');
   const [username, setUsername ] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
+
   const router = useRouter()
 
 
@@ -24,6 +27,7 @@ const SignUp = () => {
   const signUp = async () =>{
     try {
       const response = await createUserWithEmailAndPassword(auth, email, password);
+      setIsLoading(true)
       console.log(response)
       const user = auth.currentUser;
       if (user) {
@@ -36,6 +40,8 @@ const SignUp = () => {
     } catch (error) {
       console.log(error)
       alert('account creation failed')  
+    }finally{
+      setIsLoading(false)
     }
   }
 
@@ -93,10 +99,12 @@ const SignUp = () => {
       <div>
         <p className='font-sans text-meow'>Already have an Account?<Link href='/Login'> <span className='font-medium text-primary cursor-pointer'>Login</span></Link></p>
       </div>
-      <div className='flex justify-center' 
+    {isLoading ? 
+             (<Spinner size={30} color='#222' isLoading/>) :( 
+    <div className='flex justify-center' 
       onClick={()=> signUp()}>
         <button className='ring-1 ring-primary p-2 rounded-md text-primary hover:bg-primary hover:text-white'>Continue</button>
-      </div>
+      </div>)}
       </div>
       <div className='absolute -bottom-40 -right-[130px] hidden md:block '>
         <Image 

@@ -1,4 +1,5 @@
 "use client"
+import Spinner from '@/components/Spinner'
 import { auth } from './../../../FirebaseConfig'
 import { signInWithEmailAndPassword } from 'firebase/auth'
 import Image from 'next/image'
@@ -11,6 +12,8 @@ import React, { useState } from 'react'
 const Login = () => {
   const [email, setEmail ] = useState('');
   const [password, setPassword ] = useState('');
+  const [isLoading, setisLoading ] = useState(false);
+  const [message, setMessage ] = useState<string | null>(null)
   const router = useRouter();
 
 
@@ -20,13 +23,16 @@ const Login = () => {
 
 
   const login = async () => {
+    setisLoading(true)
     try {
       const response = await signInWithEmailAndPassword( auth, email, password );
-      alert('Login successful')
+      setMessage('Login successful')
       router.push('/')
     } catch (error) {
       console.log(error)
-      alert('user not registered')
+      setMessage('user not registered')
+    }finally{
+      setisLoading(false);
     }
   }
 
@@ -75,11 +81,22 @@ const Login = () => {
       <div>
         <p className='font-sans text-meow'>Don't have an Account?<Link href='/signup'> <span className='font-medium text-primary cursor-pointer'>Create one.</span></Link></p>
       </div>
-      <div className='flex justify-center' onClick={()=>login()}>
-        {/* <Button type='submit' title='Continue'/> */}
-        <button className='ring-1 ring-primary p-2 rounded-md text-primary hover:bg-primary hover:text-white'>Continue</button>
-      </div>
-      </div>
+     
+     
+     <div className='flex justify-center flex-col items-center' onClick={()=>login()}>
+      {message && <p className='text-primary text-lg'>{message}</p>}
+     {isLoading ? 
+        (
+          <div className='ring-1 ring-primary p-2 rounded-md'>
+            <Spinner size={20} color='#222' isLoading/>
+          </div>
+      ) :( 
+        <button className='ring-1 ring-primary p-2 rounded-md text-primary hover:bg-primary hover:text-white md:w-1/2'>
+          Continue
+          </button>)}
+      </div> 
+     
+     </div>
       <div className='absolute -bottom-40 -right-[130px] hidden md:block '>
         <Image 
          src='/hero.png'
