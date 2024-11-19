@@ -28,7 +28,7 @@ const Newletter = () => {
       <div className='flex flex-row justify-between md:bg-white my-5 md:rounded-full rounded-md gap-5'>
         <input type="text" placeholder='Enter Your Email' className='rounded-full p-2 text-sm outline-none border-none font-sans' />
         <div className='cursor-pointer'>
-            <button className='bg-primary md:rounded-r-full md:rounded-b-full py-2 px-3 rounded-md'>submit</button>
+            <button className='bg-primary md:rounded-r-full md:rounded-b-full py-2 px-3 rounded-md hover:text-primary hover:ring-1 hover:ring-primary hover:bg-white'>submit</button>
         </div>
       </div>
       <div className='absolute -bottom-40 -right-[100px] hidden md:block '>
