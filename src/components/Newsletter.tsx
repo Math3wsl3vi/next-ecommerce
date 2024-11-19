@@ -24,7 +24,7 @@ const Newletter = () => {
          className='mb-5'
         />
       </div>
-      <h2 className='font-sans text-meow'>Enter Your email address to join our mailing list and keep yourself up to date</h2>
+      <h2 className='font-sans text-meow'>Join our mailing list so we can send you flowers in you email</h2>
       <div className='flex flex-row justify-between md:bg-white my-5 md:rounded-full rounded-md gap-5'>
         <input type="text" placeholder='Enter Your Email' className='rounded-full p-2 text-sm outline-none border-none font-sans' />
         <div className='cursor-pointer'>

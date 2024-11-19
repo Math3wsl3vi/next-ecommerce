@@ -10,11 +10,11 @@ const Footer = () => {
         {/* left */}
         <div className='w-full md:w-1/2 lg:w-1/4 flex flex-col gap-8'>
         <Link href={'/'}>
-        <div className='text-2xl tracking-wide'>Mauatitude</div>
+        <div className='text-2xl tracking-wide hover:text-primary cursor-pointer'>Mauatitude</div>
         </Link>
         <p>550 Lanet, Nakuru</p>
-        <span className='font-semibold'>mauatitude@gmail.com</span>
-        <span className='font-semibold'>0717271815</span>
+        <span className='font-semibold hover:text-primary text-lg cursor-pointer'>mauatitude@gmail.com</span>
+        <span className='font-semibold hover:text-primary text-lg cursor-pointer'>0717271815</span>
         <div className='flex gap-6 '>
           <Image src={'/facebook.png'} alt='image' width={16} height={16}/>
           <Image src={'/instagram.png'} alt='image' width={16} height={16}/>
@@ -29,33 +29,33 @@ const Footer = () => {
          <div className='flex flex-col justify-between'>
           <h1 className='font-medium text-xl'>COMPANY</h1>
           <div className='flex flex-col gap-6'>
-            <Link href={'/'}>About Us</Link>
-            <Link href={'/'}>Career</Link>
-            <Link href={'/'}>Affiliates</Link>
-            <Link href={'/'}>Blog</Link>
-            <Link href={'/'}>Conatact Us</Link>
+            <Link href={'/'} className='hover:text-primary text-lg'>About Us</Link>
+            <Link href={'/'} className='hover:text-primary text-lg'>Career</Link>
+            <Link href={'/'} className='hover:text-primary text-lg'>Affiliates</Link>
+            <Link href={'/'} className='hover:text-primary text-lg'>Blog</Link>
+            <Link href={'/'} className='hover:text-primary text-lg'>Conatact Us</Link>
           </div>
          </div>
          {/* links */}
          <div className='flex flex-col justify-between'>
           <h1 className='font-medium text-xl'>INFO</h1>
           <div className='flex flex-col gap-6'>
-            <Link href={'/'}>Terms and Conditions</Link>
-            <Link href={'/'}>Privacy Policy</Link>
-            <Link href={'/'}>Biscuit Policy</Link>
-            <Link href={'/'}>FAQs</Link>
-            <Link href={'/'}>Conatact Us</Link>
+            <Link href={'/'} className='hover:text-primary text-lg'>Terms and Conditions</Link>
+            <Link href={'/'} className='hover:text-primary text-lg'>Privacy Policy</Link>
+            <Link href={'/'} className='hover:text-primary text-lg'>Biscuit Policy</Link>
+            <Link href={'/'} className='hover:text-primary text-lg'>FAQs</Link>
+            <Link href={'/'} className='hover:text-primary text-lg'>Conatact Us</Link>
           </div>
          </div>
          {/* links */}
          <div className='flex flex-col justify-between'>
           <h1 className='font-medium text-xl'>COMPANY</h1>
           <div className='flex flex-col gap-6'>
-            <Link href={'/'}>About Us</Link>
-            <Link href={'/'}>Career</Link>
-            <Link href={'/'}>Affiliates</Link>
-            <Link href={'/'}>Blog</Link>
-            <Link href={'/'}>Conatact Us</Link>
+            <Link href={'/'} className='hover:text-primary text-lg'>About Us</Link>
+            <Link href={'/'} className='hover:text-primary text-lg'>Career</Link>
+            <Link href={'/'} className='hover:text-primary text-lg'>Affiliates</Link>
+            <Link href={'/'} className='hover:text-primary text-lg'>Blog</Link>
+            <Link href={'/'} className='hover:text-primary text-lg'>Conatact Us</Link>
           </div>
          </div>
         </div>

@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import React from 'react'
 
 const Blog = () => {
@@ -16,6 +17,7 @@ const Blog = () => {
       </div>
       <h1 className='text-center font-sans text-meow'>There are many variations of passages of lorem ipsum available</h1>
       <div className='flex flex-col md:flex-row justify-center items-center gap-5 mt-10'>
+        <Link href={'/lathews'}>
         <div className='flex flex-col max-w-[400px] cursor-pointer hover:shadow-sm'>
        <div>
        <Image 
@@ -32,7 +34,9 @@ const Blog = () => {
         <p className='text-[13px] font-sans font-light'>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium...</p>
        </div>
         </div>
-        <div className='flex flex-col max-w-[400px] cursor-pointer hover:shadow-sm'>
+        </Link>
+       <Link href={'/liberty'}>
+       <div className='flex flex-col max-w-[400px] cursor-pointer hover:shadow-sm'>
        <div>
        <Image 
          src='/img31.jpg'
@@ -48,6 +52,8 @@ const Blog = () => {
         <p className='text-[13px] font-sans font-light'>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium...</p>
        </div>
         </div>
+        </Link>
+        <Link href={'/mathematics'}>
         <div className='flex flex-col max-w-[400px] cursor-pointer hover:shadow-sm'>
        <div>
        <Image 
@@ -61,9 +67,10 @@ const Blog = () => {
        <div className='p-2 text-center'>
         <h4 className='text-[13px]'>Post by: <span className='text-meow'> Levi Mathematics</span></h4>
         <h1 className='font-medium font-sans'>Studies show plants are not what they seem</h1>
-        <p className='text-[13px] font-sans font-light'>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium...</p>
+        <p className='text-[13px] font-sans font-light'>Plants are plotting against us. Don’t trust their leafy smiles...”</p>
        </div>
         </div>
+        </Link>
       </div>
     </div>
   )
