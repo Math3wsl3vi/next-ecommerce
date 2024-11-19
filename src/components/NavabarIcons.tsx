@@ -33,7 +33,7 @@ const NavabarIcons = () => {
       }
     })
     return () => unsubscribe()
-  },[auth])
+  },[])
 
 
     const handleProfile = ()=>{

@@ -79,7 +79,7 @@ const Login = () => {
         <div className='absolute top-2.5 right-2 cursor-pointer font-sans text-meow text-sm'>Show</div>
       </div>
       <div>
-        <p className='font-sans text-meow'>Don't have an Account?<Link href='/signup'> <span className='font-medium text-primary cursor-pointer'>Create one.</span></Link></p>
+        <p className='font-sans text-meow'>{"Don't"} have an Account?<Link href='/signup'> <span className='font-medium text-primary cursor-pointer'>Create one.</span></Link></p>
       </div>
      
      

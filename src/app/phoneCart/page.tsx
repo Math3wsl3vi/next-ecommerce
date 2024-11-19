@@ -63,7 +63,7 @@ const PhoneCart = () => {
             <p>Shipping and Taxes calculated</p>
             <div className='flex justify-between text-sm mt-5'>
                 <Link href={'/list'}><button className='rounded-md py-3 px-4 ring-1 ring-gray-300'>Continue Shopping</button></Link>
-                <button className='rounded-md py-3 px-4 bg-black text-white disabled:cursor-not-allowed' disabled={isLoading}>Checkout</button>
+               <Link href={'/checkout'}><button className='rounded-md py-3 px-4 bg-black text-white disabled:cursor-not-allowed' disabled={isLoading}>Checkout</button></Link>
             </div>
             </div>
              </>
